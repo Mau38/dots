@@ -8,7 +8,7 @@ alias bfg='java -jar ~/jars/bfg.jar'
 alias fuck=thefuck
 alias terminal=konsole
 alias dust='dust -r'
-alias config='git --git-dir=$HOME/workplace/p/dots --work-tree=$HOME'
+alias dots='git --git-dir=$HOME/workplace/p/dots --work-tree=$HOME'
 
 
 export PATH="$HOME/.cargo/bin:$PATH"
