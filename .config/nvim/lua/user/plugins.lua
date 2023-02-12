@@ -43,26 +43,29 @@ return packer.startup(function(use)
 
 	-- random tools
 	use { "nvim-lua/plenary.nvim" } -- Useful lua functions used by lots of plugins
-	use { "windwp/nvim-autopairs"} -- Autopairs, integrates with both cmp and treesitter
 	use { "numToStr/Comment.nvim" }
 	use { "JoosepAlviste/nvim-ts-context-commentstring" }
 	use { "lewis6991/impatient.nvim" }
 	use {  'windwp/nvim-ts-autotag' } 
 	use { 'mattn/emmet-vim' } 
+
+  -- styling
   use { 'feline-nvim/feline.nvim'}
   use { 'nvim-tree/nvim-web-devicons' }
   use { "EdenEast/nightfox.nvim" }
+  use { 'norcalli/nvim-colorizer.lua' }
+
+  -- dap
   use { 'mfussenegger/nvim-dap' }
-  use { 'nvim-treesitter/nvim-treesitter' } 
   use {'theHamsta/nvim-dap-virtual-text' } 
   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
 
 	-- lsp
 	use { "neovim/nvim-lspconfig" }
-	use { "nvim-treesitter/nvim-treesitter" }
+	use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
 	use { "RRethy/vim-illuminate" }
 	use { 'ray-x/lsp_signature.nvim' }
-	-- use { 'ray-x/go.nvim' } -- Golang 
+	use { 'ray-x/go.nvim' } -- Golang 
 	use { 'rust-lang/rust.vim' } -- Rust 
 	use { 'simrat39/rust-tools.nvim' } -- Rust
 	use { 'jvirtanen/vim-hcl' } -- hcl
@@ -87,6 +90,9 @@ return packer.startup(function(use)
 	-- fzf
 	use { 'junegunn/fzf', run = ":call fzf#install()" }
 	use { 'junegunn/fzf.vim' }
+
+  use { "iamcco/markdown-preview.nvim", run = function() vim.fn["mkdp#util#install"]() end, }
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
 	-- Automcatically set up your config after cloning packer.nvim
 	if PACKER_BOOTSTRAP then
