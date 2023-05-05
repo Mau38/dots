@@ -5,7 +5,6 @@ idea to manage dot files in github comes from [DistroTube](https://www.youtube.c
 
 best way to clone:
 ```sh
-/usr/bin/git --git-dir=$HOME/workplace/dots/ --work-tree=$HOME
 git clone --bare http://github.com/gabrieldiaziv/dots $HOME/workplace/dots
 /usr/bin/git --git-dir=$HOME/workplace/dots/ --work-tree=$HOME checkout
 ```
