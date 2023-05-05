@@ -3,7 +3,7 @@ local term_opts  = { slient = true }
 
 local keymap = vim.keymap.set
 
--- leader key
+-- leader key --
 keymap("", ",", "<Nop>", opts)
 vim.g.mapleader = ","
 vim.g.maplocalleader = ","
@@ -14,7 +14,7 @@ keymap("", "L", "$", opts)
 keymap("n", "<F9>", ":set spell!<CR>", opts)
 keymap("i", "<F9>", "<C-O>:set spell!<CR>", opts)
 
--- Normal Mode
+-- Normal Mode --
 -- Window Navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
@@ -29,6 +29,9 @@ keymap("n", "<leader>ff", "gg=G<CR>", opts)
 keymap("n", "<leader>;", ":Buffers<CR>", opts)
 keymap("n", "<leader>ta", ":tab ba<CR>", opts)
 keymap("n", "<leader>fi", ":belowright split<CR>:term fish<CR>:resize 10<CR>", opts) -- open terminal 
+
+-- open ranger in cwd
+keymap("n", "<leader>F", ":RnvimrToggle<CR>", opts)
 
 -- get rid of arrow keys
 keymap("n", "<up>", "<nop>", opts)
@@ -45,7 +48,7 @@ keymap("n", "<right>", ":bn<CR>", opts)
 keymap("n", "n", "nzz", default_opts)
 keymap("n", "N", "Nzz", default_opts)
 
--- Visual 
+-- Visual --
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)

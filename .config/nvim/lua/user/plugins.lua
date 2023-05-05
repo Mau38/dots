@@ -72,7 +72,8 @@ return packer.startup(function(use)
 	use { 'yuezk/vim-js' } -- js
 	use {  'maxmellon/vim-jsx-pretty' } -- jsx
 	use {  'wuelnerdotexe/vim-astro' } -- astro
-
+  use { 'prisma/vim-prisma'} --prisma
+  use { 'mfussenegger/nvim-jdtls' } -- java
 	-- cmp
 	use { "hrsh7th/nvim-cmp" }
 	use { "hrsh7th/cmp-nvim-lsp" }
@@ -91,8 +92,12 @@ return packer.startup(function(use)
 	use { 'junegunn/fzf', run = ":call fzf#install()" }
 	use { 'junegunn/fzf.vim' }
 
+  -- ranger
+  use { 'francoiscabrol/ranger.vim' }    
+  use { 'rbgrouleff/bclose.vim' }
+  use { 'kevinhwang91/rnvimr' }
+
   use { "iamcco/markdown-preview.nvim", run = function() vim.fn["mkdp#util#install"]() end, }
-  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
 	-- Automcatically set up your config after cloning packer.nvim
 	if PACKER_BOOTSTRAP then

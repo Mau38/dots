@@ -2,7 +2,6 @@ local ok, feline = pcall(require, "feline")
 if not ok then
 	return
 end
-
 feline.setup()
 
 local ok, icons  = pcall(require, "nvim-web-devicons")
@@ -28,3 +27,5 @@ if not ok then
   return
 end
 colorizer.setup()
+
+

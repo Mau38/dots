@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/razer/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
+  ["bclose.vim"] = {
+    loaded = true,
+    path = "/home/razer/.local/share/nvim/site/pack/packer/start/bclose.vim",
+    url = "https://github.com/rbgrouleff/bclose.vim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/razer/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -179,6 +184,11 @@ _G.packer_plugins = {
     path = "/home/razer/.local/share/nvim/site/pack/packer/start/nvim-dap-virtual-text",
     url = "https://github.com/theHamsta/nvim-dap-virtual-text"
   },
+  ["nvim-jdtls"] = {
+    loaded = true,
+    path = "/home/razer/.local/share/nvim/site/pack/packer/start/nvim-jdtls",
+    url = "https://github.com/mfussenegger/nvim-jdtls"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/razer/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -214,6 +224,16 @@ _G.packer_plugins = {
     path = "/home/razer/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["ranger.vim"] = {
+    loaded = true,
+    path = "/home/razer/.local/share/nvim/site/pack/packer/start/ranger.vim",
+    url = "https://github.com/francoiscabrol/ranger.vim"
+  },
+  rnvimr = {
+    loaded = true,
+    path = "/home/razer/.local/share/nvim/site/pack/packer/start/rnvimr",
+    url = "https://github.com/kevinhwang91/rnvimr"
+  },
   ["rust-tools.nvim"] = {
     loaded = true,
     path = "/home/razer/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
@@ -248,6 +268,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/razer/.local/share/nvim/site/pack/packer/start/vim-jsx-pretty",
     url = "https://github.com/maxmellon/vim-jsx-pretty"
+  },
+  ["vim-prisma"] = {
+    loaded = true,
+    path = "/home/razer/.local/share/nvim/site/pack/packer/start/vim-prisma",
+    url = "https://github.com/prisma/vim-prisma"
   },
   ["vim-vsnip"] = {
     loaded = true,

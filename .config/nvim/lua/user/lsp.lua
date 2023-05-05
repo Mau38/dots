@@ -103,7 +103,7 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, bufopts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
 
-  vim.keymap.set('n', '<leader>do', '<cmd>lua vim.diagnostic.open_float()<CR>', bufopts)
+  vim.keymap.set('n', '<leader>e', '<cmd>lua vim.diagnostic.open_float()<CR>', bufopts)
   vim.keymap.set('n', '<leader>d[', '<cmd>lua vim.diagnostic.goto_prev()<CR>', bufopts)
   vim.keymap.set('n', '<leader>d]', '<cmd>lua vim.diagnostic.goto_next()<CR>', bufopts)
 
@@ -124,15 +124,18 @@ local go_attach = function (client, bufnr)
     print("go.nvim")
   end
   
+  print("starting go")
   go.setup()
 end
 
-
+--  https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 local servers = {
 	tsserver = default_config,
 	clangd = default_config,
 	pyright = default_config,
 	rust_analyzer = default_config,
+	prismals = default_config,
+
 	gopls = { 
 		on_attach = go_attach,
 		capabilites = capabilites,

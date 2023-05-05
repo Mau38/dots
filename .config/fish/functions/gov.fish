@@ -43,5 +43,6 @@ function gov
 
 	# store new variables
 	set -gx GOROOT $VIRTUALGO/go
-	set -gx GOPATH $VIRTUALGO/packages 
+	set -gx GOPATH $VIRTUALGO/packages
+  fish_add_path $VIRTUALGO/packages/bin
 end
