@@ -28,11 +28,10 @@ quick overview of all the tools i use:
 - spicetify: theming for spotify
 
 other tools i use:
-- asdf: tool version manager
+- [asdf](https://asdf-vm.com/guide/getting-started.html): tool version manager
+- [thefuck](https://github.com/nvbn/thefuck): helpful to correct dumb spelling mistakes
 
-
-helpful scrips:
+helpful scrips i wrote:
 - activate: used to start python .venv in local enviornment
 - gov: sets golang version based on asdf version
 - dots: used to manager this repo
-
