@@ -98,6 +98,10 @@ return packer.startup(function(use)
   use { 'kevinhwang91/rnvimr' }
 
   use { "iamcco/markdown-preview.nvim", run = function() vim.fn["mkdp#util#install"]() end, }
+  
+  -- telescope
+  use { 'nvim-telescope/telescope.nvim', tag = '0.1.1', requires = { {'nvim-lua/plenary.nvim'} } }
+  
 
 	-- Automcatically set up your config after cloning packer.nvim
 	if PACKER_BOOTSTRAP then

@@ -22,4 +22,4 @@ vim.cmd[[
 ]]
 
 -- FZF
-keymap("", "<C-p>", ":FZF<CR>", opts)
+keymap("", "<C-p>", '<Cmd>lua require(\'telescope.builtin\').find_files({layout_strategy=\'horizontal\'})<CR>', opts)
