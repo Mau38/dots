@@ -5,14 +5,14 @@ idea to manage dot files in github comes from [DistroTube](https://www.youtube.c
 
 best way to clone:
 ```sh
-git clone --bare http://github.com/gabrieldiaziv/dots $HOME/workplace/dots
-/usr/bin/git --git-dir=$HOME/workplace/dots/ --work-tree=$HOME checkout
+git clone --bare http://github.com/gabrieldiaziv/dots $HOME/dots
+git --git-dir=$HOME/dots/ --work-tree=$HOME checkout
 ```
 
 if theres issues with files that would be replaced:
 ```sh
 mkdir -p .config-backup && \
-config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
+git --git-dir=$HOME/dots/ --work-tree=$HOME checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
 xargs -I{} mv {} .config-backup/{}
 ```
 
