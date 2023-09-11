@@ -30,4 +30,4 @@ end
 keymap("n", "<C-p>", builtin.find_files, {})
 
 -- FZF
-keymap("", "<C-p>", ":FZF<CR>", opts)
+keymap("", "<C-M-p>", ":FZF<CR>", opts)
