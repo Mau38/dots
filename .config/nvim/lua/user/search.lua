@@ -21,5 +21,13 @@ vim.cmd[[
 				\   <bang>0)
 ]]
 
+local status_ok, builtin = pcall(require, 'telescope.builtin')
+if not status_ok then
+  return
+end
+
+-- telescope
+keymap("n", "<C-p>", builtin.find_files, {})
+
 -- FZF
 keymap("", "<C-p>", ":FZF<CR>", opts)

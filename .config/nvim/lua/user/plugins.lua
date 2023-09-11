@@ -87,6 +87,9 @@ return packer.startup(function(use)
 
 	-- Git
 	use { "lewis6991/gitsigns.nvim" }
+  
+  -- telescope
+  use { "nvim-telescope/telescope.nvim" }
 
 	-- fzf
 	use { 'junegunn/fzf', run = ":call fzf#install()" }
