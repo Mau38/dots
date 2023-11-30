@@ -1,7 +1,7 @@
-local opts = { noremap = true, silent = true }
-local term_opts  = { slient = true } 
+local opts      = { noremap = true, silent = true }
+local term_opts = { slient = true }
 
-local keymap = vim.keymap.set
+local keymap    = vim.keymap.set
 
 -- leader key --
 keymap("", ",", "<Nop>", opts)
@@ -28,7 +28,7 @@ keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 keymap("n", "<leader>ff", "gg=G<CR>", opts)
 keymap("n", "<leader>;", ":Buffers<CR>", opts)
 keymap("n", "<leader>ta", ":tab ba<CR>", opts)
-keymap("n", "<leader>fi", ":belowright split<CR>:term fish<CR>:resize 10<CR>", opts) -- open terminal 
+keymap("n", "<leader>fi", ":belowright split<CR>:term fish<CR>:resize 10<CR>", opts) -- open terminal
 
 -- open ranger in cwd
 keymap("n", "<leader>F", ":RnvimrToggle<CR>", opts)

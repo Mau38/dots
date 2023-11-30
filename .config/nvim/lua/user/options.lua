@@ -1,7 +1,7 @@
 local options = {
   backup = false,                          -- creates a backup file
   clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
-  cmdheight = 1,                           -- 
+  cmdheight = 1,                           --
   completeopt = { "menuone", "noselect" }, -- mostly just for cmp
   conceallevel = 0,                        -- so that `` is visible in markdown files
   fileencoding = "utf-8",                  -- the encoding written to a file
@@ -23,32 +23,32 @@ local options = {
   writebackup = false,                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
   expandtab = true,                        -- convert tabs to spaces
   shiftwidth = 2,                          -- the number of spaces inserted for each indentation
-  tabstop = 2,                             -- insert 2 spaces for a tab
+  tabstop = 4,                             -- insert 2 spaces for a tab
   cursorline = true,                       -- highlight the current line
   number = true,                           -- set numbered lines
-  relativenumber = false,                  -- set relative numbered lines
+  relativenumber = true,                   -- set relative numbered lines
   numberwidth = 4,                         -- set number column width to 2 {default 4}
   syntax = "enable",
 
-  signcolumn = "yes:1",                      -- always show the sign column, otherwise it would shift the text each time
-  wrap = true,                             -- display lines as one long line
-  linebreak = true,                        -- companion to wrap, don't split words
-  scrolloff = 8,                           -- minimal number of screen lines to keep above and below the cursor
-  sidescrolloff = 8,                       -- minimal number of screen columns either side of cursor if wrap is `false`
-  guifont = "Hack:h17",               -- the font used in graphical neovim applications
-  whichwrap = "bs<>[]hl",                  -- which "horizontal" keys are allowed to travel to prev/next line
+  signcolumn = "yes:1",   -- always show the sign column, otherwise it would shift the text each time
+  wrap = true,            -- display lines as one long line
+  linebreak = true,       -- companion to wrap, don't split words
+  scrolloff = 8,          -- minimal number of screen lines to keep above and below the cursor
+  sidescrolloff = 8,      -- minimal number of screen columns either side of cursor if wrap is `false`
+  guifont = "Hack:h17",   -- the font used in graphical neovim applications
+  whichwrap = "bs<>[]hl", -- which "horizontal" keys are allowed to travel to prev/next line
   wildmenu = true,
-  spelllang = "en",                          -- spelling to english
+  spelllang = "en",       -- spelling to english
 }
 
 for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
--- vim.cmd[[let g:ranger_replace_netrw = 1]]                   -- netrw banner 
-vim.cmd[[let g:rnvimr_enable_picker = 1]]
+-- vim.cmd[[let g:ranger_replace_netrw = 1]]                   -- netrw banner
+vim.cmd [[let g:rnvimr_enable_picker = 1]]
 -- vim.opt.shortmess = "ilmnrx"                        -- flags to shorten vim messages, see :help 'shortmess'
-vim.opt.shortmess:append "c"                           -- don't give |ins-completion-menu| messages
-vim.opt.iskeyword:append "-"                           -- hyphenated words recognized by searches
-vim.opt.formatoptions:remove({ "c", "r", "o" })        -- don't insert the current comment leader automatically for auto-wrapping comments using 'textwidth', hitting <Enter> in insert mode, or hitting 'o' or 'O' in normal mode.
-vim.opt.runtimepath:remove("/usr/share/vim/vimfiles")  
+vim.opt.shortmess:append "c"                    -- don't give |ins-completion-menu| messages
+vim.opt.iskeyword:append "-"                    -- hyphenated words recognized by searches
+vim.opt.formatoptions:remove({ "c", "r", "o" }) -- don't insert the current comment leader automatically for auto-wrapping comments using 'textwidth', hitting <Enter> in insert mode, or hitting 'o' or 'O' in normal mode.
+vim.opt.runtimepath:remove("/usr/share/vim/vimfiles")

@@ -34,13 +34,13 @@ comment.setup {
 
 -- auto tags
 local ok, auto_tag = pcall(require, 'nvim-ts-autotag')
-if not ok then 
-	return
+if not ok then
+  return
 end
 auto_tag.setup()
 
 -- tabs for 2-tab files
-vim.cmd[[
+vim.cmd [[
 	autocmd FileType javascript.jsx,javascriptreact,vim,html,php setlocal tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 	autocmd FileType jscss,css,son,javascript,typescript,typescriptreact setlocal tabstop=4 softtabstop=0 expandtab shiftwidth=2 smarttab
 ]]

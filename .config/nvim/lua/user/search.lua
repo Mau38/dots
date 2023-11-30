@@ -1,18 +1,18 @@
-local opts = { noremap = true, silent = true }
-local term_opts  = { slient = true } 
-local keymap = vim.keymap.set
+local opts      = { noremap = true, silent = true }
+local term_opts = { slient = true }
+local keymap    = vim.keymap.set
 
 
 vim.cmd [[ let g:fzf_layout = { 'down': '40%' } ]]
 
 -- RG
 if vim.fn.executable('rg') == 1 then
-  vim.o.grepprg='rg --no-heading --vimgrep'
-  vim.o.grepformat='%f:%l:%c:%m'
+  vim.o.grepprg = 'rg --no-heading --vimgrep'
+  vim.o.grepformat = '%f:%l:%c:%m'
 end
 
-keymap("n", "<leader>s", ":Rg<CR>" , opts)
-vim.cmd[[
+keymap("n", "<leader>s", ":Rg<CR>", opts)
+vim.cmd [[
 	command! -bang -nargs=* Rg
 				\ call fzf#vim#grep(
 				\   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
@@ -27,7 +27,8 @@ if not status_ok then
 end
 
 -- telescope
-keymap("n", "<C-p>", builtin.find_files, {})
-
--- FZF
+keymap("", "<C-p>", builtin.find_files, {})
+keymap("", "<C-g>", builtin.git_files, {})
+keymap("", "<C-u>", vim.cmd.UndotreeToggle, {})
+-- fzf
 keymap("", "<C-M-p>", ":FZF<CR>", opts)

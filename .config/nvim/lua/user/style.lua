@@ -1,3 +1,9 @@
+local ok, nordic = pcall(require, "nordic")
+if not ok then 
+  return
+end
+nordic.setup()
+
 local ok, feline = pcall(require, "feline")
 if not ok then
 	return
@@ -28,4 +34,4 @@ if not ok then
 end
 colorizer.setup()
 
-
+nordic.load()
