@@ -3,7 +3,7 @@ all my dots!
 
 idea to manage dot files in github comes from [DistroTube](https://www.youtube.com/watch?v=tBoLDpTWVOM)
 
-best way to clone:
+best way to clone **before fish** is installed:
 ```sh
 git clone --bare http://github.com/gabrieldiaziv/dots $HOME/dots
 git --git-dir=$HOME/dots/ --work-tree=$HOME checkout
