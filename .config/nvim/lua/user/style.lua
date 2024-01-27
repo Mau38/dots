@@ -1,30 +1,30 @@
 local ok, nordic = pcall(require, "nordic")
-if not ok then 
+if not ok then
   return
 end
 nordic.setup()
 
 local ok, feline = pcall(require, "feline")
 if not ok then
-	return
+  return
 end
 feline.setup()
 
-local ok, icons  = pcall(require, "nvim-web-devicons")
+local ok, icons = pcall(require, "nvim-web-devicons")
 if not ok then
-	return
+  return
 end
 icons.setup()
 
-local ok, fox  = pcall(require, "nightfox")
+local ok, fox = pcall(require, "nightfox")
 if not ok then
-	return
+  return
 end
-vim.cmd[[colorscheme carbonfox]]
+vim.cmd [[colorscheme carbonfox]]
 
 local status_ok, gitsigns = pcall(require, "gitsigns")
 if not status_ok then
-	return
+  return
 end
 gitsigns.setup()
 
@@ -34,4 +34,4 @@ if not ok then
 end
 colorizer.setup()
 
-nordic.load()
+fox.load()

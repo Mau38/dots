@@ -30,5 +30,6 @@ end
 keymap("", "<C-p>", builtin.find_files, {})
 keymap("", "<C-g>", builtin.git_files, {})
 keymap("", "<C-u>", vim.cmd.UndotreeToggle, {})
+keymap("", "<C-F>", builtin.live_grep, {})
 -- fzf
 keymap("", "<C-M-p>", ":FZF<CR>", opts)
